@@ -1,5 +1,5 @@
 const LANG_KEY = 'mathcraft-lang';
-let lang = 'es';
+let lang = 'en';
 
 const I18N = {
   es: {
@@ -284,11 +284,10 @@ function loadLang() {
   try {
     const saved = localStorage.getItem(LANG_KEY);
     if (saved === 'en' || saved === 'es') lang = saved;
-    else {
-      const nav = (navigator.language || '').toLowerCase();
-      lang = nav.startsWith('en') ? 'en' : 'es';
-    }
-  } catch (e) {}
+    else lang = 'en';
+  } catch (e) {
+    lang = 'en';
+  }
 }
 function saveLang() {
   try { localStorage.setItem(LANG_KEY, lang); } catch (e) {}
