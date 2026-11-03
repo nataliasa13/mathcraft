@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Village Tables</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/game.css">
+</head>
+<body>
+<header class="hud wrap">
+    <canvas id="hud-steve" width="48" height="56"></canvas>
+    <div class="hud-text">
+      <div id="build-name" class="hud-title">…</div>
+      <div id="build-progress">…</div>
+      <div id="master-line">…</div>
+    </div>
+    <div id="streak-box" class="streak-box" title="Streak">
+      <strong>🔥 <span id="streak-num">0</span></strong>
+      <span id="streak-goal">…</span>
+    </div>
+    <div class="lang-flags" role="group" aria-label="Language" id="lang-flags">
+      <button type="button" class="lang-btn" id="lang-es" data-lang="es" title="Español" aria-label="Español">
+        <span class="flag flag-es" aria-hidden="true"></span>
+        <span class="lang-code">ES</span>
+      </button>
+      <button type="button" class="lang-btn" id="lang-en" data-lang="en" title="English" aria-label="English">
+        <span class="flag flag-en" aria-hidden="true"></span>
+        <span class="lang-code">EN</span>
+      </button>
+    </div>
+    <button id="sound-btn" type="button" class="mc-btn mc-btn-stone icon-btn" aria-label="Sound">🔊</button>
+  </header>
+  <div id="toast" aria-live="polite"></div>
+
+  <nav class="tabs" aria-label="Sections">
+    <button id="tab-aldea" type="button" class="mc-btn tab on">…</button>
+    <button id="tab-minar" type="button" class="mc-btn tab">…</button>
+    <button id="tab-cofre" type="button" class="mc-btn tab">…</button>
+  </nav>
+
+  <div id="picker" class="wrap"></div>
+
+  <main id="play" class="wrap mc-panel play">
+    <div id="aldea-view">
+      <div class="scene-wrap">
+        <canvas id="scene" width="400" height="240"></canvas>
+      </div>
+      <div id="pips"></div>
+    </div>
+
+    <div id="mine-view" class="mine-hero hidden">
+      <p class="mine-kicker" id="mine-kicker">…</p>
+      <div id="mine-cube" class="mine-cube stone">
+        <span id="mine-pick-label" style="font-size:.85rem;color:#fff;background:#0008;padding:2px 6px;margin-bottom:6px;">…</span>
+        <strong id="mine-ore-label" class="mine-title">…</strong>
+      </div>
+      <div id="mine-loot" class="mine-loot"></div>
+    </div>
+
+    <p id="feedback">…</p>
+    <div id="play-ask">
+      <p class="ask-kicker" id="ask-kicker">…</p>
+      <p id="ask-main">…</p>
+      <p id="ask-symbol">2 × 3</p>
+      <div id="answers"></div>
+    </div>
+    <div id="done-banner" class="hidden" style="text-align:center;margin:10px 0 0;">
+      <p id="done-banner-text" style="margin:0 0 8px;font-size:1.05rem;font-weight:700;color:#215c12;">…</p>
+      <button id="rebuild-btn" type="button" class="mc-btn mc-btn-gold" style="min-height:48px;padding:0 16px;font-size:1rem;">…</button>
+    </div>
+  </main>
+
+  <section id="chest" class="wrap mc-panel chest hidden">
+    <div class="chest-top">
+      <h2 id="chest-title">…</h2>
+      <button id="chest-back" type="button" class="mc-btn">…</button>
+    </div>
+    <p id="chest-intro" style="margin:0 0 8px;font-size:1rem;font-weight:700;color:#5a3b12;">…</p>
+    <div id="inventory"></div>
+    <div id="recipes"></div>
+    <p id="chest-note"></p>
+    <button id="reset-btn" type="button" class="quiet">…</button>
+  </section>
+
+  <div id="help-modal" class="modal hidden">
+    <div class="mc-panel modal-card">
+      <h3 id="help-title">…</h3>
+      <p id="help-intro"></p>
+      <div id="help-grid"></div>
+      <p id="help-count"></p>
+      <p id="help-result"></p>
+      <button id="help-close" type="button" class="mc-btn">…</button>
+    </div>
+  </div>
+
+  <div id="victory-modal" class="modal hidden">
+    <div class="mc-panel modal-card">
+      <h3 id="victory-title">…</h3>
+      <p id="victory-known"></p>
+      <p id="victory-hit"></p>
+      <p id="victory-prize"></p>
+      <p id="victory-next"></p>
+      <button id="victory-close" type="button" class="mc-btn" style="margin-bottom:8px;">…</button>
+      <button id="victory-rebuild" type="button" class="mc-btn mc-btn-gold">…</button>
+    </div>
+  </div>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/game.js"></script>
+</body>
+</html>
