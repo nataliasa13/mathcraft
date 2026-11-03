@@ -4,7 +4,7 @@ Juego educativo de tablas de multiplicar con estética de bloques, minado y craf
 
 ## Cómo abrirlo
 
-Abre `index.html` en el navegador, o súbelo a **GitHub Pages** (la raíz del repo debe servir `index.html`).
+Abre `index.html` en el navegador.
 
 Idioma: botones **ES** / **EN** en la barra superior (se guarda la preferencia).
 
