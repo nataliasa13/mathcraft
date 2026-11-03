@@ -2,12 +2,6 @@
 
 Juego educativo de tablas de multiplicar con estética de bloques, minado y crafteo.
 
-## Cómo abrirlo
-
-Abre `index.html` en el navegador.
-
-Idioma: botones **ES** / **EN** en la barra superior (se guarda la preferencia).
-
 ## Aviso legal / Disclaimer
 
 **Este proyecto no está afiliado, asociado, autorizado ni respaldado por Mojang Studios, Microsoft Corporation ni por Minecraft.**
