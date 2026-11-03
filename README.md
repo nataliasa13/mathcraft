@@ -1,6 +1,6 @@
 # Village Tables (Mathcraft)
 
-Juego educativo de tablas de multiplicar con estética de bloques, minado y crafteo. Pensado para niños (~7 años).
+Juego educativo de tablas de multiplicar con estética de bloques, minado y crafteo.
 
 ## Cómo abrirlo
 
